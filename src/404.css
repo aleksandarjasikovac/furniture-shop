@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.inner-container h1 {
+  font-size: 8rem;
+  color: #5f9ea0;
+}
+
+.main-container {
+}
+
+.inner-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sexy-beard img {
+  width: 200px;
+}
