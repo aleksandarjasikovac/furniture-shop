@@ -1,24 +1,30 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration:none;
 }
 
-.inner-container h1 {
-  font-size: 8rem;
-  color: #5f9ea0;
-}
+
 
 .main-container {
+  margin:0 auto;
+  padding-top:50px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap: 2rem;
 }
 
-.inner-container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+.left-box {
+display:flex;
+height:400px;
 }
 
-.sexy-beard img {
-  width: 200px;
+.right-box {
+  max-width:500px;
+}
+
+.right-box h1 {
+  font-size: 8rem;
+  color: #5f9ea0;
 }

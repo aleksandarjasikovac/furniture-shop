@@ -4,8 +4,10 @@ import "./404.css";
 
 export const NotFound = () => (
   <div class="main-container">
-    <div className="inner-container">
-      <img style={{ width: 500, marginTop: 50 }} src="https://assets.website-files.com/5d5e2ff58f10c53dcffd8683/5d5e3028240e834dfea6e47f_bikini.svg" alt="" />
+    <div className="left-box">
+      <img src="https://assets.website-files.com/5d5e2ff58f10c53dcffd8683/5d5e3028240e834dfea6e47f_bikini.svg" alt="" />
+      </div>
+      <div className="right-box">
       <h1>404</h1>
       <h2>UH OH! You're lost.</h2>
       <p>
@@ -15,7 +17,8 @@ export const NotFound = () => (
       <button class="btn green">
         <Link to="/">Go Home</Link>
       </button>
+      </div>
     </div>
 
-  </div>
+  
 );
