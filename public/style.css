@@ -7,18 +7,27 @@ ul {
 }
 
 .top-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: black;
   height: 40px;
   width: 100%;
+  color: white;
 }
-
+.top-message span:not(:first-child) {
+  margin-left: 60px;
+}
+.top-message p {
+  padding-left: 10px;
+}
 .main-menu {
   margin: 0 auto;
   max-width: 1200px;
   padding-top: 50px;
   display: flex;
   align-items: center;
-  justify-content:space-between;
+  justify-content: space-between;
 }
 
 .menu ul {
