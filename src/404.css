@@ -1,27 +1,29 @@
 * {
   margin: 0;
   padding: 0;
-  text-decoration:none;
+  text-decoration: none;
 }
 
-
+hr {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
 
 .main-container {
-  margin:0 auto;
-  padding-top:50px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  margin: 0 auto;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
 }
 
 .left-box {
-display:flex;
-height:400px;
+  display: flex;
+  height: 400px;
 }
 
 .right-box {
-  max-width:500px;
+  max-width: 500px;
 }
 
 .right-box h1 {

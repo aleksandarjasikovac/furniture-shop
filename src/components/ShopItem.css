@@ -48,3 +48,20 @@
   font-size: 14px;
   line-height: 1.25;
 }
+.price-cart {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.btn-add {
+  all: unset;
+  background: #5f9ea0;
+  color: #ffffff;
+  font: 14px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-add:hover {
+  background: #7ab9bb;
+}

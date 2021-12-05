@@ -30,6 +30,7 @@ p {
 
 .btn {
   all: unset;
+  cursor: pointer;
   margin-top: 42px;
   background: #5f9ea0;
   border-radius: 1000px;
