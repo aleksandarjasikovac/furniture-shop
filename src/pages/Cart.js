@@ -110,7 +110,7 @@ export function Cart() {
             type="submit"
             onClick={() => setButtonPopup(false)}
           >
-            Yes, I'm Ok With It!
+            I'm Fine With That
           </button>
           <button
             className="pu-button cancel"
