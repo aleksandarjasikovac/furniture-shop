@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import { StateContext } from "../App";
 import { CartItem } from "../components/CartItem";
 import { Header } from "../components/Header";
@@ -16,7 +17,11 @@ export function Cart() {
   return (
     <>
       <Header />
+
       <div className="cart-container">
+        <div className="breadcrumb">
+          <Link to="/"> &#8592; Back To Shop</Link>
+        </div>
         <div className="items-list">
           <h3 style={{ paddingBottom: 15 }}>
             You have {cartNumber} item/s in your cart
