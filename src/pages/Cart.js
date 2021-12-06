@@ -19,13 +19,15 @@ export function Cart() {
       <Header />
 
       <div className="cart-container">
+
         <div className="breadcrumb">
           <Link to="/"> &#8592; Back To Shop</Link>
         </div>
         <div className="items-list">
-          <h3 style={{ paddingBottom: 15 }}>
+          {cart.length > 0 ? <h3 style={{ paddingBottom: 15 }}>
             You have {cartNumber} item/s in your cart
-          </h3>
+          </h3> : <h3 style={{ paddingBottom: 15 }}>Your Cart Is Empty, Go Back To Shop</h3>}
+
           <div className="container-one">
             <div className="cart-items-container">
               <div className="cart-items-list">
