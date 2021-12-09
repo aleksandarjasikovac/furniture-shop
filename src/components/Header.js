@@ -4,11 +4,12 @@ import { BsBagCheck } from "react-icons/bs";
 import { useContext } from "react";
 import { StateContext } from "../App";
 
-
-
 export function Header() {
   const [{ cart }] = useContext(StateContext);
-  const cartNumber = cart.length
+  const totalItems = cart.reduce((count, curItem) => {
+    return count + curItem.quantity;
+  }, 0);
+
   return (
     <header>
       <div className="top-message">
@@ -32,16 +33,16 @@ export function Header() {
         <div className="menu">
           <ul>
             <li>
-              <a href="">Proizvodi</a>
+              <Link to="/">Proizvodi</Link>
             </li>
             <li>
-              <a href="">Posebne ponude</a>
+              <Link to="/">Akcije</Link>
             </li>
             <li>
-              <a href="">Prostorije</a>
+              <Link to="/">Nova Kolekcija</Link>
             </li>
             <li>
-              <a href="">Novo</a>
+              <Link to="/">Stara Kolekcija</Link>
             </li>
           </ul>
         </div>
@@ -53,7 +54,7 @@ export function Header() {
           <Link to="/checkout">
             <BsBagCheck className="btn-bag" />
           </Link>
-          <p className="number-of-items">{cartNumber}</p>
+          <p className="number-of-items">{totalItems}</p>
         </div>
       </div>
     </header>

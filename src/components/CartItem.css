@@ -41,7 +41,7 @@
   padding-right: 30px;
 }
 .product-nm {
-  max-width: 500px;
+  max-width: 400px;
   width: 100%;
 }
 .product-nm p {
@@ -110,4 +110,20 @@ button {
   font-size: 13px;
   color: gray;
   padding-bottom: 10px;
+}
+
+.product-qty {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-right: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.inc-dec {
+  font-size: 24px;
+  padding: 10px;
+}
+
+.inc-dec:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }

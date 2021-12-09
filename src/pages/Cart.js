@@ -8,25 +8,29 @@ import Popup from "../components/Popup";
 export function Cart() {
   const [buttonPopup, setButtonPopup] = useState(false);
   const [{ cart }] = useContext(StateContext);
-  const cartNumber = cart.length;
-  const totalPrice = cart.reduce(
-    (total, currentValue) => (total = total + currentValue.price),
-    0
-  );
-
+  const totalPrice = cart.reduce((a, c) => a + c.price * c.quantity, 0);
+  const totalItems = cart.reduce((count, curItem) => {
+    return count + curItem.quantity;
+  }, 0);
+  console.log(totalItems);
   return (
     <>
       <Header />
 
       <div className="cart-container">
-
         <div className="breadcrumb">
           <Link to="/"> &#8592; Back To Shop</Link>
         </div>
         <div className="items-list">
-          {cart.length > 0 ? <h3 style={{ paddingBottom: 15 }}>
-            You have {cartNumber} item/s in your cart
-          </h3> : <h3 style={{ paddingBottom: 15 }}>Your Cart Is Empty, Go Back To Shop</h3>}
+          {cart.length > 0 ? (
+            <h3 style={{ paddingBottom: 15 }}>
+              You have {totalItems} item/s in your cart
+            </h3>
+          ) : (
+            <h3 style={{ paddingBottom: 15 }}>
+              Your Cart Is Empty, Go Back To Shop
+            </h3>
+          )}
 
           <div className="container-one">
             <div className="cart-items-container">
@@ -44,42 +48,42 @@ export function Cart() {
         </div>
         <div className="checkout-form">
           <div className="forms">
-            <form autocomplete="off" method="post" action="">
+            <form autoComplete="off" method="post" action="">
               <h4>Billing Address</h4>
               <input
-                autocomplete="off"
+                autoComplete="off"
                 type="text"
                 className="form-control"
                 placeholder="Full Name"
               />
               <input
-                autocomplete="off"
+                autoComplete="off"
                 type="text"
                 className="form-control"
                 placeholder="Email"
               />
               <input
-                autocomplete="off"
+                autoComplete="off"
                 type="text"
                 className="form-control"
                 placeholder="Address"
               />
               <h4 style={{ paddingTop: 10 }}>Payment Option</h4>
               <input
-                autocomplete="off"
+                autoComplete="off"
                 type="text"
                 className="form-control"
                 placeholder="Credit Card Number"
               />
               <div className="csv-date">
                 <input
-                  autocomplete="off"
+                  autoComplete="off"
                   type="text"
                   className="form-control "
                   placeholder="CSV"
                 />
                 <input
-                  autocomplete="off"
+                  autoComplete="off"
                   type="text"
                   className="form-control "
                   placeholder="11/21"

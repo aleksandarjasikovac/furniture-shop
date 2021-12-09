@@ -2,6 +2,7 @@ import "./ShopItem.css";
 import { Link } from "react-router-dom";
 import { StateContext } from "../App";
 import { useContext } from "react";
+import { Product } from "../pages/Product";
 
 export function ShopItem({ shopItem }) {
   const [, { addToCart }] = useContext(StateContext);
@@ -17,10 +18,13 @@ export function ShopItem({ shopItem }) {
         <p className="shop-item-product-description">{shopItem.description}</p>
         <div className="price-cart">
           <h3 className="item-price">€ {shopItem.price}</h3>
-          <button type="button" className="btn-add" onClick={() => addToCart(shopItem)}>
+          <button
+            type="button"
+            className="btn-add"
+            onClick={() => addToCart(shopItem)}
+          >
             Add to Cart
           </button>
-
         </div>
       </div>
     </div>

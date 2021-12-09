@@ -1,5 +1,4 @@
 import { useParams } from "react-router";
-import { shopItems } from "../data";
 import { BsTruck } from "react-icons/bs";
 import { BsHouse } from "react-icons/bs";
 import "./product.css";

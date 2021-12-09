@@ -1,9 +1,6 @@
 import { useContext } from "react";
-import { BsCartX } from "react-icons/bs";
-import { Link } from "react-router-dom";
 import { StateContext } from "../App";
 import { ShopItem } from "../components/ShopItem";
-import { shopItems } from "../data";
 import "./Storefront.css";
 import { Header } from "../components/Header";
 
