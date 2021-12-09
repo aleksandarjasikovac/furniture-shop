@@ -4,7 +4,8 @@ import "./CartItem.css";
 import { BsTrash } from "react-icons/bs";
 
 export function CartItem({ cartItem }) {
-  const [, { removeFromCart, addToCart }] = useContext(StateContext);
+  const [, { addToCart, cartDecrement, removeItemFromCart }] =
+    useContext(StateContext);
 
   return (
     <div className="cart-item">
@@ -21,7 +22,7 @@ export function CartItem({ cartItem }) {
         <button
           type="button"
           className="inc-dec"
-          onClick={() => removeFromCart(cartItem.id)}
+          onClick={() => cartDecrement(cartItem.id)}
         >
           -
         </button>
@@ -43,7 +44,7 @@ export function CartItem({ cartItem }) {
         <button
           type="button"
           className="remove-btn"
-          onClick={() => removeFromCart(cartItem.id)}
+          onClick={() => removeItemFromCart(cartItem.id)}
         >
           <BsTrash />
         </button>

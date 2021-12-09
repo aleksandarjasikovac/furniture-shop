@@ -121,7 +121,7 @@ button {
 }
 .inc-dec {
   font-size: 24px;
-  padding: 10px;
+  padding: 5px 10px;
 }
 
 .inc-dec:hover {

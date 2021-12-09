@@ -121,8 +121,12 @@ export function Cart() {
             type="submit"
             onClick={() => setButtonPopup(false)}
           >
-            I'm Fine With That
+            <Link to="/paymentsuccess" style={{ color: "black" }}>
+              {" "}
+              I'm Fine With That
+            </Link>
           </button>
+
           <button
             className="pu-button cancel"
             onClick={() => setButtonPopup(false)}

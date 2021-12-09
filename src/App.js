@@ -6,6 +6,7 @@ import "./App.css";
 import { NotFound } from "./404page";
 import { useState } from "react";
 import { Cart } from "./pages/Cart";
+import { PaymentSuccess } from "./pages/PaymentSuccess";
 
 const defaultState = {
   cart: [],
@@ -127,7 +128,7 @@ export function App() {
       });
     },
 
-    removeFromCart: (id) => {
+    cartDecrement: (id) => {
       setState((prevState) => {
         const updatedCart = [...state.cart];
         const updatedItemIndex = updatedCart.findIndex(
@@ -147,6 +148,15 @@ export function App() {
         return { ...state, cart: updatedCart };
       });
     },
+    removeItemFromCart: (id) => {
+      const newCartItems = state.cart.filter((cartItem) => cartItem.id !== id);
+      setState((prevState) => {
+        return {
+          ...prevState,
+          cart: newCartItems,
+        };
+      });
+    },
   };
 
   return (
@@ -157,6 +167,7 @@ export function App() {
           <Route path="/checkout" element={<Cart />} />
           <Route path="/products/:productId" element={<Product />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/paymentsuccess" element={<PaymentSuccess />} />
         </Routes>
       </BrowserRouter>
     </StateContext.Provider>
