@@ -2,7 +2,6 @@ import "./ShopItem.css";
 import { Link } from "react-router-dom";
 import { StateContext } from "../App";
 import { useContext } from "react";
-import { Product } from "../pages/Product";
 
 export function ShopItem({ shopItem }) {
   const [, { addToCart }] = useContext(StateContext);
