@@ -2,15 +2,12 @@ import { useContext } from "react";
 import { StateContext } from "../App";
 import "./CartItem.css";
 import { BsTrash } from "react-icons/bs";
-import { ShopItem } from "./ShopItem";
 
 export function CartItem({ cartItem }) {
   const [, { removeFromCart, addToCart }] = useContext(StateContext);
 
-
   return (
     <div className="cart-item">
-
       <div className="product-cart-img">
         <img src={cartItem.img} alt="" />
       </div>
@@ -19,7 +16,6 @@ export function CartItem({ cartItem }) {
         <h4>{cartItem.name}</h4>
         <p>{cartItem.description}</p>
         <p style={{ fontSize: 13, color: "gray" }}>Sku: {cartItem.id}</p>
-
       </div>
       <div className="product-qty">
         <button
@@ -33,11 +29,10 @@ export function CartItem({ cartItem }) {
         <button
           type="button"
           className="inc-dec"
-          onClick={() => addToCart(cartItem.id)}
+          onClick={() => addToCart(cartItem)}
         >
           +
         </button>
-
       </div>
 
       <div className="product-price">
@@ -48,7 +43,7 @@ export function CartItem({ cartItem }) {
         <button
           type="button"
           className="remove-btn"
-          onClick={() => addToCart(cartItem.id)}
+          onClick={() => removeFromCart(cartItem.id)}
         >
           <BsTrash />
         </button>

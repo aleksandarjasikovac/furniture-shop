@@ -12,7 +12,6 @@ export function Cart() {
   const totalItems = cart.reduce((count, curItem) => {
     return count + curItem.quantity;
   }, 0);
-  console.log(totalItems);
   return (
     <>
       <Header />
@@ -41,7 +40,7 @@ export function Cart() {
               </div>
               <div className="total-price">
                 <p className="total-sm">Total Price:</p>
-                <h2>€ {totalPrice}</h2>
+                <h2>€ {totalPrice.toFixed(2)}</h2>
               </div>
             </div>
           </div>
@@ -92,7 +91,7 @@ export function Cart() {
             </form>
             <div className="total-price">
               <p className="total-sm">Total Price:</p>
-              <h2>€ {totalPrice}</h2>
+              <h2>€ {totalPrice.toFixed(2)}</h2>
             </div>
 
             <div>
@@ -111,7 +110,8 @@ export function Cart() {
         <h3>Purchase Confirmation</h3>
         <br />
         <p>
-          Your Total Bill is: € {totalPrice}, are you sure you want to proceed?
+          Your Total Bill is: € {totalPrice.toFixed(2)}, are you sure you want
+          to proceed?
         </p>
         <br />
         <hr />
